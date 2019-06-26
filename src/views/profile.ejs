@@ -1,0 +1,66 @@
+<% layout ('layouts/users.ejs') %>
+<h2>User profile & options</h2>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="col-md-6">
+                <h3>My info</h3>
+            
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>Email</th>
+                        <td><%= user.email_address %></td>
+                    </tr>
+                    <tr>
+                        <th>First name</th>
+                        <td><%= user.first_name %></td>
+                    </tr>
+                    <tr>
+                        <th>Last name</th>
+                        <td><%= user.last_name %></td>
+                    </tr>
+                    <!-- <tr>
+                        <th>Image</th>
+                        <td></td>
+                    </tr> -->
+                </table>
+                <p><a href="/logout">Logout</a> (from UI)</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>My admin options</h3>
+            <div class="card">
+                <div class="card-body">    
+                    <h4>Update</h4>
+                    <form action="/admin/update" method="post">
+                        <div class="form-group">
+                            <input type="text" readonly name="email_address" placeholder="Email" class="form-control" value = "<%= user.email_address %>">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="first_name" placeholder="First name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" placeholder="Last name" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update information from user</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <h4>Delete</h4>
+                    <form action="/admin/delete" method="post">
+                        <div class="form-group">
+                            <input type="text" readonly name="email_address" placeholder="Email" class="form-control" value="<%= user.email_address %>">
+                        </div>
+                        <button type="submit" class="btn btn-danger">Delete user</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

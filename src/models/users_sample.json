@@ -1,0 +1,8 @@
+[
+    {
+        "email_address": "admin@foo.com",
+        "password": "$2a$10$VAWfdy53aGubAm1z4nUjLe4IGvlyEEutLYHjozUOiygeLEAcW6HRa", 
+        "first_name": "John", 
+        "last_name": "Doe"
+    }
+]

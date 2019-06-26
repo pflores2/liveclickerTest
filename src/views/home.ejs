@@ -1,0 +1,36 @@
+<% layout ('layouts/users.ejs') %>
+
+<h2>Users home page</h2>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <% if (loggedIn) { %>
+                <p>Logged in as <%= user.email_address %></p>
+                <a href="profile" class="btn btn-primary">Go to profile</a>
+                <% if (isAdmin) {  %>
+                    <a href="admin" class="btn btn-primary">Go to users admin page</a>
+                <% } %>
+                <a href="logout" class="btn btn-danger">Logout</a>
+            <% } else { %>
+                <div class="card">
+                    <div class="card-body">    
+                        <h3>Login</h3>
+                        <form action="/login" method="POST">
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" placeholder="Password" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>                    
+                        <p class="mt-4">To login as admin, user: admin@foo.com password: admin</p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+        <div class="col-md-6">
+        </div>
+    </div>        
+</div>
+

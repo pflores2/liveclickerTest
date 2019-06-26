@@ -1,0 +1,36 @@
+{
+  "name": "restapi-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "ejs": "^2.6.2",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-session": "^1.16.2",
+    "fs": "0.0.1-security",
+    "jimp": "^0.6.4",
+    "json": "^9.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.0",
+    "stream": "0.0.2",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
+}

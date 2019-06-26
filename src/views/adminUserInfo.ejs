@@ -1,0 +1,21 @@
+<% layout ('layouts/admin.ejs') %>
+<h2>User info</h2>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Email</th>
+        <td><%= user.email_address %></td>
+    </tr>
+    <tr>
+        <th>First name</th>
+        <td><%= user.first_name %></td>
+    </tr>
+    <tr>
+        <th>Last name</th>
+        <td><%= user.last_name %></td>
+    </tr>
+    <!-- <tr>
+        <th>Image</th>
+        <td></td>
+    </tr> -->
+</table>
+<p><a href="/admin">Back to admin</a></p>
